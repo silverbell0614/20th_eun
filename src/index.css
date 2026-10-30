@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Lao MN';
+  src: url('./assets/fonts/lao-mn.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-bg: #f7f7f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eceef1;
+  --color-line: #ceebfd;
+  --color-divider: #ceebfd;
+
+  --color-ink: #7b8592;
+  --color-ink-muted: #7b8592;
+  --color-faint: #f7f8f9;
+
+  --color-accent: #9fc3e8;
+  --color-accent-dark: #6fa0d6;
+  --color-accent-soft: #e9f8ff;
+
+  --color-highlight: #e8748f;
+
+  --color-seat-available: #a78bfa;
+  --color-seat-selected: #6d28d9;
+  --color-seat-unavailable: #eceef1;
+
+  --color-stroke: #ceebfd;
+
+  --color-dark-bg: #151515;
+  --color-dark-ink: #f5f5f5;
+  --color-dark-ink-muted: #8a8a8a;
+  --color-dark-line: rgba(245, 245, 245, 0.2);
+
+  --font-sans: 'Pretendard', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Lao MN', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes text-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes bg-blink {
+  0%,
+  100% {
+    background-color: #e9f8ff;
+  }
+  50% {
+    background-color: #a3daf8;
+  }
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+[data-capturing],
+[data-capturing] * {
+  box-shadow: none !important;
+}
